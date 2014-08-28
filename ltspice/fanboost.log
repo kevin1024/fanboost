@@ -1,0 +1,22 @@
+Circuit: * C:\Users\kevin\Documents\GitHub\fanboost\ltspice\fanboost.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Aug 28 22:10:19 2014
+Total elapsed time: 14.305 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3895270
+traniter = 3895254
+tranpoints = 1201357
+accept = 908292
+rejected = 293065
+matrix size = 22
+fillins = 4
+solver = Normal
+Matrix Compiler1: 658 bytes object code size  0.9/0.8/[0.8]
+Matrix Compiler2: 1.32 KB object code size  0.8/0.8/[0.8]
+
+
