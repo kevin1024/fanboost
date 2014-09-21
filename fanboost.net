@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\kevin\Documents\GitHub\fanboost\fanboost.sch)
-    (date "8/28/2014 8:24:44 PM")
+    (date "9/20/2014 1:52:11 PM")
     (tool "eeschema (2013-07-07 BZR 4022)-stable"))
   (components
     (comp (ref C1)
@@ -85,6 +85,19 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 54001C67)))
   (libparts
+    (libpart (lib device) (part CP1)
+      (description "Condensateur polarise")
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) CP1)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part C)
       (description "Condensateur non polarise")
       (footprints
@@ -99,28 +112,6 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part CP1)
-      (description "Condensateur polarise")
-      (footprints
-        (fp CP*)
-        (fp SM*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) CP1)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part INDUCTOR)
-      (fields
-        (field (name Reference) L)
-        (field (name Value) INDUCTOR)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
     (libpart (lib device) (part DIODESCH)
       (description "Diode schottky")
       (footprints
@@ -151,6 +142,15 @@
       (pins
         (pin (num 1) (name A) (type passive))
         (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part INDUCTOR)
+      (fields
+        (field (name Reference) L)
+        (field (name Value) INDUCTOR)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
     (libpart (lib device) (part R)
       (description Resistance)
       (footprints
@@ -175,6 +175,15 @@
       (pins
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name PM) (type passive))))
+    (libpart (lib switch_spdt) (part SWITCH_SPDT)
+      (description "Switch single pole double throw (SPDT)")
+      (fields
+        (field (name Reference) SW)
+        (field (name Value) SWITCH_SPDT))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive))))
     (libpart (lib fanboost) (part LT1308B)
       (fields
         (field (name Reference) U)
@@ -189,25 +198,16 @@
         (pin (num 5) (name SW) (type output))
         (pin (num 6) (name VIN) (type input))
         (pin (num 7) (name LBI) (type input))
-        (pin (num 8) (name LBO) (type openCol))))
-    (libpart (lib switch_spdt) (part SWITCH_SPDT)
-      (description "Switch single pole double throw (SPDT)")
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) SWITCH_SPDT))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 3) (type passive)))))
+        (pin (num 8) (name LBO) (type openCol)))))
   (libraries
     (library (logical device)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\device.lib"))
     (library (logical conn)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
-    (library (logical switch_spdt)
-      (uri C:\Users\kevin\switch_spdt.lib))
     (library (logical fanboost)
-      (uri fanboost.lib)))
+      (uri fanboost.lib))
+    (library (logical switch_spdt)
+      (uri C:\Users\kevin\switch_spdt.lib)))
   (nets
     (net (code 1) (name VCC)
       (node (ref R1) (pin 1))

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/28/2014 8:51:32 PM
+Cmp-Mod V01 Created by PcbNew date = 9/20/2014 2:02:30 PM
 
 BeginCmp
 TimeStamp = /53FD7BA6;
@@ -39,14 +39,14 @@ BeginCmp
 TimeStamp = /53FD7BF9;
 Reference = L1;
 ValeurCmp = 4.7uH;
-IdModule  = H08;
+IdModule  = IHLPInductor;
 EndCmp
 
 BeginCmp
 TimeStamp = /54000A69;
 Reference = P1;
 ValeurCmp = CONN_2;
-IdModule  = SM1206;
+IdModule  = CONN_JST_2_SMD;
 EndCmp
 
 BeginCmp
@@ -102,7 +102,7 @@ BeginCmp
 TimeStamp = /53FD89C8;
 Reference = SW1;
 ValeurCmp = SWITCH_SPDT;
-IdModule  = SW_SPDT;
+IdModule  = T511004;
 EndCmp
 
 BeginCmp
